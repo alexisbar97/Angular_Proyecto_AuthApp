@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.scss */
+body {
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+  background-image: url('https://w.wallhaven.cc/full/5g/wallhaven-5g22q5.png'); /* Ruta de la imagen */
+  background-size: cover; /* Cubre toda la pantalla */
+  background-position: center; /* Centra la imagen */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff; /* Texto blanco */
+}
+
+/* Estilos globales para los formularios */
+mat-card {
+  background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente oscuro */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+input {
+  color: #fff;
+}
+
+mat-label {
+  color: rgba(255, 255, 255, 0.7);
+}

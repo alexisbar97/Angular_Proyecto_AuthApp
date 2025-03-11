@@ -1,0 +1,97 @@
+<mat-card class="register-card">
+  <mat-card-header>
+    <mat-card-title class="title">Registro</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form (ngSubmit)="onSubmit()">
+      <!-- Nombre -->
+      <mat-form-field appearance="outline">
+        <mat-label>Nombre</mat-label>
+        <input
+          matInput
+          [(ngModel)]="registerData.firstName"
+          name="firstName"
+          required
+        />
+      </mat-form-field>
+
+      <!-- Apellido -->
+      <mat-form-field appearance="outline">
+        <mat-label>Apellido</mat-label>
+        <input
+          matInput
+          [(ngModel)]="registerData.lastName"
+          name="lastName"
+          required
+        />
+      </mat-form-field>
+
+      <!-- Nickname -->
+      <mat-form-field appearance="outline">
+        <mat-label>Nickname</mat-label>
+        <input
+          matInput
+          [(ngModel)]="registerData.nickname"
+          name="nickname"
+          required
+        />
+      </mat-form-field>
+
+      <!-- Email -->
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input
+          matInput
+          type="email"
+          [(ngModel)]="registerData.email"
+          name="email"
+          required
+        />
+      </mat-form-field>
+
+      <!-- Contraseña -->
+      <mat-form-field appearance="outline">
+        <mat-label>Contraseña</mat-label>
+        <input
+          matInput
+          type="password"
+          [(ngModel)]="registerData.password"
+          name="password"
+          required
+        />
+      </mat-form-field>
+
+      <!-- País -->
+      <mat-form-field appearance="outline">
+        <mat-label>País</mat-label>
+        <mat-select [(ngModel)]="registerData.country" name="country" required>
+          <mat-option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <!-- Fecha de nacimiento -->
+      <mat-form-field appearance="outline">
+        <mat-label>Fecha de nacimiento</mat-label>
+        <input
+          matInput
+          [matDatepicker]="picker"
+          [(ngModel)]="registerData.birthDate"
+          name="birthDate"
+          required
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <!-- Botón de registro -->
+      <button mat-raised-button class="register-button" type="submit">
+        Registrarse
+      </button>
+    </form>
+    <p class="link-text">
+      ¿Ya tienes una cuenta? <a routerLink="/login">Inicia Sesión</a>
+    </p>
+  </mat-card-content>
+</mat-card>
