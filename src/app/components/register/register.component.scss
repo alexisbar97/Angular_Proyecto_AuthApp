@@ -1,0 +1,94 @@
+.register-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 1rem;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 1.5rem;
+
+    input {
+      color: #fff;
+    }
+
+    mat-label {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .mat-form-field-outline {
+      color: rgba(255, 255, 255, 0.3);
+    }
+
+    .mat-form-field-outline-thicker {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .register-button {
+    width: 100%;
+    margin-top: 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  .link-text {
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+
+    a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .register-card {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .register-card {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .register-card {
+    width: 500px;
+  }
+}
